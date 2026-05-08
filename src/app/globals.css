@@ -1,0 +1,59 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+  --font-serif: var(--font-instrument-serif), serif;
+  --font-fraunces: var(--font-fraunces), serif;
+  
+  --color-brand-orange: #F47A2C;
+  --color-brand-peach: #FFB871;
+  --color-brand-charcoal: #1A1A1A;
+  --color-brand-slate: #F4F2EE;
+}
+
+.glass {
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+:root {
+  --foreground: #171717;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+}
+
+/* Custom styles from forge.html */
+.reveal-word {
+  display: inline-block;
+  vertical-align: bottom;
+}
+
+.reveal-word > span {
+  display: inline-block;
+  opacity: 0;
+  vertical-align: bottom;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-8px); }
+}
+
+.animate-float {
+  animation: float 4s ease-in-out infinite;
+}
+
+.animate-float-delay {
+  animation: float 4s ease-in-out infinite;
+  animation-delay: 1.5s;
+}
+
+/* Masked Reveal utilities */
+.reveal-text.masked-reveal {
+  /* Add any specific styles if needed */
+}
